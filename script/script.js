@@ -1,8 +1,5 @@
-const cells = document.querySelectorAll('.celula');
+const peixe = document.getElementById('#peixe');
 
-cells.forEach(cell => {
-    cell.addEventListener('click', () => {
-    const position = cell.dataset.pos; // Obtém o valor do atributo data-pos
-    console.log(`Você clicou na posição: ${position}`);
-    });
-});
+let X = window.innerWidth / 2 ;
+let Y = window.innerHeight / 2;
+

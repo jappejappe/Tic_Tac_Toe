@@ -13,6 +13,7 @@
 body {
     display: flex;
     background-color: var(--1);
+    overflow: hidden;
 }
 
 header {
@@ -25,17 +26,21 @@ header {
     background-color: var(--2);
 }
 
+header img {
+    width: 96px;
+    height: 96px;
+}
+
 section {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: auto;
 }
 
 main {
     display: flex;
-    width: auto;
-    height: auto;
     margin: auto;
 }
 
@@ -108,4 +113,11 @@ img {
 #logo {
     display: flex;
     justify-content: start;
+}
+
+#peixe {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    transform-origin: center;
 }
