@@ -4,32 +4,108 @@
     padding: 0;
 }
 
+:root{
+    --1: #82C0D9;
+    --2: #F27B35;
+    --3: #507cd3;
+}
+
 body {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: var(--1);
 }
 
 header {
-    width: 100%;
-    top: 0;
-    left: 0;
-    height: 100px;
-    background-color: aqua;
-}
-
-button {
-    border: 1px solid black;
-    background-color: gray;
-    width: 200px;
-    height: 200px;
-    font-size: 80px;
-}
-
-#tab {
+    position: absolute;
     display: flex;
-    flex-direction: column;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--2);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    width: auto;
+    height: auto;
     margin: auto;
+}
+
+.tabuleiro {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 5px;
+    background-color: #333;
+    padding: 5px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 300px;
+}
+
+.linha {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.celula {
+    width: 100px;
+    height: 100px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.celula:hover {
+    background-color: #d7d7d7;
+}
+
+nav {
+    width: 300px;
+    display: flex;
+    list-style: none;
+    display: flex;
+    color: black;
+}
+
+nav li{
+    position: relative;
+    color: black;
+    list-style: none;
     
+}
+
+nav li:not(:last-child)::after {
+    content: "|";
+    font-size: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    font-size: 50px;
+}
+
+img {
+    margin-right: 1000px;
+}
+
+#logo {
+    display: flex;
+    justify-content: start;
 }

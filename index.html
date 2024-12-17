@@ -5,31 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="./style/style.css">
+    <script src="./script/script.js"></script>
 </head>
 <body>
     <header>
+        <div id="logo">
+            <img src="./image/icons8-hashtag-96.png" alt="">
+            <p>Tic Tac Toe</p>
+        </div>
         <nav>
-            <a href="">Jogo</a>
-            <a href="">Regras</a>
+            <li><a href="">Jogo</a></li>
+            <li><a href="">Regras</a></li>
         </nav>
     </header>
     <main>
         <section>
-            <div id="tab">
-                <div id="linha1">
-                    <button id="a">0</button>
-                    <button id="b">0</button>
-                    <button id="c">0</button>
+            <div class="tabuleiro">
+                <div class="linha">
+                    <button class="celula" data-pos="a"></button>
+                    <button class="celula" data-pos="b"></button>
+                    <button class="celula" data-pos="c"></button>
                 </div>
-                <div id="linha2">
-                    <button id="d">0</button>
-                    <button id="e">0</button>
-                    <button id="f">0</button>
+                <div class="linha">
+                    <button class="celula" data-pos="d"></button>
+                    <button class="celula" data-pos="e"></button>
+                    <button class="celula" data-pos="f"></button>
                 </div>
-                <div id="linha3">
-                    <button id="g">0</button>
-                    <button id="h">0</button>
-                    <button id="i">0</button>
+                <div class="linha">
+                    <button class="celula" data-pos="g"></button>
+                    <button class="celula" data-pos="h"></button>
+                    <button class="celula" data-pos="i"></button>
                 </div>
             </div>
         </section>
