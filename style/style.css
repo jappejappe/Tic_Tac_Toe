@@ -108,6 +108,7 @@ a {
 
 img {
     margin-right: 1000px;
+    
 }
 
 #logo {
@@ -116,8 +117,8 @@ img {
 }
 
 #peixe {
-    width: 200px;
-    height: 200px;
+    width: 125px;
+    height: 125px;
     position: absolute;
     transform-origin: center;
 }
