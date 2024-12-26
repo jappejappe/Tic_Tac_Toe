@@ -12,7 +12,9 @@
 
 body {
     display: flex;
-    background-color: var(--1);
+    background-image: url(../image/ocean-wave-7-colorful-blue-waves-acegif.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
     overflow: hidden;
 }
 
