@@ -1,29 +1,39 @@
 * {
     margin: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
     padding: 0;
+    user-select: none;
 }
 
 :root{
-    --1: #82C0D9;
-    --2: #F27B35;
-    --3: #507cd3;
+    --1: #8f8dff;
+    --2: #ff2323;
 }
 
 body {
     display: flex;
-    background-image: url(../image/ocean-wave-7-colorful-blue-waves-acegif.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: var(--1);
     overflow: hidden;
+    justify-content: center;
 }
 
-header {
+#fundoHeader {
     position: absolute;
     display: flex;
     width: 100%;
     height: 100px;
     justify-content: center;
+    background-color: var(--2);
+
+}
+
+header {
+    position: absolute;
+    max-width: 80%;
+    width: 100%;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
     align-items: center;
     background-color: var(--2);
 }
@@ -33,51 +43,9 @@ header img {
     height: 96px;
 }
 
-section {
+#logo {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: auto;
-}
-
-main {
-    display: flex;
-    margin: auto;
-}
-
-.tabuleiro {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 5px;
-    background-color: #333;
-    padding: 5px;
-    border-radius: 10px;
-    margin: auto;
-    margin-top: 300px;
-}
-
-.linha {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
-}
-
-.celula {
-    width: 100px;
-    height: 100px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    background-color: #fff;
-    border: 2px solid #333;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.celula:hover {
-    background-color: #d7d7d7;
+    justify-content: start;
 }
 
 nav {
@@ -108,19 +76,85 @@ a {
     font-size: 50px;
 }
 
-img {
-    margin-right: 1000px;
-    
-}
-
-#logo {
+main {
+    width: 80%;
     display: flex;
-    justify-content: start;
+    justify-content: center;
 }
 
-#peixe {
-    width: 125px;
-    height: 125px;
-    position: absolute;
-    transform-origin: center;
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
+
+img {
+    height: 400px;
+    width: 400px;
+}
+
+#x {
+    transform: scaleX(-1);
+}
+
+
+/* #################### PRINCIPAL #################### */
+#jogo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+.tabuleiro {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 5px;
+    background-color: #333;
+    padding: 5px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 300px;
+}
+
+.linha {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d7d7d7;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+#vez {
+    font-size: 80px;
+}
+
+#reiniciar {
+    width: 200px;
+    height: 70px;
+    margin: 30px 30px 30px 30px;
+    background-color: var(--2);
+}
+/* ################################################################### */

@@ -5,39 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="./style/style.css">
-    <script src="./script/script.js"></script>
 </head>
 <body>
-    <header>
-        <div id="logo">
-            <img src="./image/hashtag.png" alt="">
-        </div>
-        <nav>
-            <li><a href="">Jogo</a></li>
-            <li><a href="">Regras</a></li>
-        </nav>
-    </header>
+    <div id="fundoHeader">
+        <header>
+            <div id="logo">
+                <img src="./image/hashtag.png" alt="">
+            </div>
+            <nav>
+                <li><a href="">Jogo</a></li>
+                <li><a href="">Regras</a></li>
+            </nav>
+        </header>
+    </div>
     <main>
         <section>
-            <div class="tabuleiro">
-                <div class="linha">
-                    <button class="celula" data-pos="a"></button>
-                    <button class="celula" data-pos="b"></button>
-                    <button class="celula" data-pos="c"></button>
-                </div>
-                <div class="linha">
-                    <button class="celula" data-pos="d"></button>
-                    <button class="celula" data-pos="e"></button>
-                    <button class="celula" data-pos="f"></button>
-                </div>
-                <div class="linha">
-                    <button class="celula" data-pos="g"></button>
-                    <button class="celula" data-pos="h"></button>
-                    <button class="celula" data-pos="i"></button>
-                </div>
+            <div>
+                <img src="./image/x.png" alt="boneco vermelho" id="x">
             </div>
-            <img src="./image/koi_fish.gif" id="peixe" alt="peixe">
+            <div id="jogo">
+                <div class="tabuleiro">
+                    <div class="linha">
+                        <button data-pos="0"></button>
+                        <button data-pos="1"></button>
+                        <button data-pos="2"></button>
+                    </div>
+                    <div class="linha">
+                        <button data-pos="3"></button>
+                        <button data-pos="4"></button>
+                        <button data-pos="5"></button>
+                    </div>
+                    <div class="linha">
+                        <button data-pos="6"></button>
+                        <button data-pos="7"></button>
+                        <button data-pos="8"></button>
+                    </div>
+                </div>
+                <h2>Vez do:</h2>
+                <div id="vez">X</div>
+                <button id="reiniciar">
+                    Reiniciar
+                </button>
+            </div>
+            <div>
+                <img src="./image/bola.png" alt="boneco azul" id="bola">
+            </div>
         </section>
     </main>
+    <script src="./script/script.js"></script>
 </body>
+
 </html>
