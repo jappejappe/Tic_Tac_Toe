@@ -239,4 +239,10 @@ h2 {
 }
 
 
+#header_pagina2  {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+
 /* #####################################################################1 */
