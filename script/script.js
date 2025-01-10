@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function verificarEmpate() {
-        return posicoes.every(posicao => posicao !== null); // Retorna true se todas as posições estiverem preenchidas
+        return posicoes.every(posicao => posicao !== null); // Retorna empate se todas as posições estiverem preenchidas
     }
 
     tabuleiro.addEventListener('click', (event) => {
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const vencedor = condicaoVitoria();
             if (vencedor) {
                 mensagemVitoria.classList.add('mostrar');
-                vencedorSpan.textContent = `${vencedor} venceu!`; 
+                vencedorSpan.textContent = `${vencedor} venceu! `; 
                 jogando = false;
                 return;
             }
