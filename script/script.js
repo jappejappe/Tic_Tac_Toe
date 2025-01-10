@@ -9,6 +9,36 @@ document.addEventListener('DOMContentLoaded', () => {
         [0, 4, 8], [2, 4, 6]             // Diagonaisasas
     ];
     
+    function salvarEstado() {
+        const estado = {
+            posicoes,
+            jogador,
+            jogando
+        };
+        localStorage.setItem('estadoJogo', JSON.stringify(estado));
+    }
+    
+    function carregarEstado() {
+        const estadoSalvo = localStorage.getItem('estadoJogo');
+        if (estadoSalvo) {
+            const { posicoes: posSalvas, jogador: jogadorSalvo, jogando: jogandoSalvo } = JSON.parse(estadoSalvo);
+            posicoes = posSalvas;
+            jogador = jogadorSalvo;
+            jogando = jogandoSalvo;
+    
+            posicoes.forEach((valor, index) => {
+                const button = document.querySelector(`button[data-pos="${index}"]`);
+                if (valor) {
+                    button.textContent = valor;
+                    button.classList.add(valor === 'X' ? 'jogadorX' : 'jogadorO');
+                }
+            });
+    
+            vez.textContent = jogador;
+        }
+    }
+    
+
     let jogando = true;
     let jogador = "X";
     let posicoes = Array(9).fill(null); // Lista para salvar as posições ocupadas
@@ -46,20 +76,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 mensagemVitoria.classList.add('mostrar');
                 vencedorSpan.textContent = `${vencedor} venceu! `; 
                 jogando = false;
+                salvarEstado()
                 return;
             }
     
-           
             if (verificarEmpate()) {
                 mensagemVitoria.classList.add('mostrar');
                 vencedorSpan.textContent = "Deu Velha"; 
                 document.querySelector("#imagem_clashroyale").src = "./image/cry.gif";
                 jogando = false;
+                salvarEstado()
                 return;
             }
     
             jogador = jogador === 'X' ? 'O' : 'X'; 
             vez.textContent = jogador;
+            salvarEstado()
         }
     });
     
@@ -74,6 +106,9 @@ document.addEventListener('DOMContentLoaded', () => {
         vez.textContent = jogador;
         jogando = true;
         mensagemVitoria.classList.remove('mostrar');
+        localStorage.removeItem('estadoJogo'); // apaga o estado salvo do jogo
     });
     
+    carregarEstado();
+
 });
