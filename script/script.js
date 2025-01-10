@@ -73,15 +73,20 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const vencedor = condicaoVitoria();
             if (vencedor) {
-                mensagemVitoria.classList.add('mostrar');
+                mensagemVitoria.style.visibility = 'visible';
+                mensagemVitoria.style.opacity = '1';
+                mensagemVitoria.style.transform = 'translate(-50%, -50%) scale(1)';
                 vencedorSpan.textContent = `${vencedor} venceu! `; 
+                document.querySelector("#imagem_clashroyale").src = "./image/heheheha-clash-royale.gif";
                 jogando = false;
                 salvarEstado()
                 return;
             }
     
             if (verificarEmpate()) {
-                mensagemVitoria.classList.add('mostrar');
+                mensagemVitoria.style.visibility = 'visible';
+                mensagemVitoria.style.opacity = '1';
+                mensagemVitoria.style.transform = 'translate(-50%, -50%) scale(1)';
                 vencedorSpan.textContent = "Deu Velha"; 
                 document.querySelector("#imagem_clashroyale").src = "./image/cry.gif";
                 jogando = false;
@@ -105,7 +110,9 @@ document.addEventListener('DOMContentLoaded', () => {
         jogador = 'X';
         vez.textContent = jogador;
         jogando = true;
-        mensagemVitoria.classList.remove('mostrar');
+        mensagemVitoria.style.visibility = 'invisible';
+        mensagemVitoria.style.opacity = '0';
+        mensagemVitoria.style.transform = 'translate(0, 0) scale(1)';
         localStorage.removeItem('estadoJogo'); // apaga o estado salvo do jogo
     });
     
