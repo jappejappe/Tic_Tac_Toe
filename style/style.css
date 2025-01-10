@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -60,7 +62,7 @@ nav li{
     position: relative;
     color: black;
     list-style: none;
-    
+    font-family: "Bangers", serif;
 }
 
 nav li:not(:last-child)::after {
@@ -72,7 +74,7 @@ nav li:not(:last-child)::after {
 
 a {
     text-decoration: none;
-    color: #333;
+    color: black;
     font-size: 50px;
 }
 
@@ -90,13 +92,14 @@ section {
 }
 
 img {
-    height: 400px;
-    width: 400px;
+    height: 500px;
+    width: 500px;
 }
 
 #x {
     transform: scaleX(-1);
 }
+
 
 
 /* #################### PRINCIPAL #################### */
@@ -113,7 +116,7 @@ img {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 5px;
-    background-color: #333;
+    background-color: black;
     padding: 5px;
     border-radius: 10px;
     margin: auto;
@@ -129,11 +132,12 @@ img {
 button {
     width: 100px;
     height: 100px;
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 35px;
+    font-family: "Bangers", serif;
+    font-weight: none;
     text-align: center;
     background-color: #fff;
-    border: 2px solid #333;
+    border: 2px solid black;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -144,11 +148,13 @@ button:hover {
 }
 
 h2 {
+    justify-content: center;
     margin-top: 30px;
 }
 
 #vez {
     font-size: 80px;
+    font-family: "Bangers", serif;
 }
 
 #reiniciar {
