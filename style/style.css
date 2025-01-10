@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+
 * {
     margin: 0;
     box-sizing: border-box;
     padding: 0;
     user-select: none;
+    font-family: "Bangers", serif;
 }
 
 :root{
@@ -72,7 +76,7 @@ nav li:not(:last-child)::after {
 
 a {
     text-decoration: none;
-    color: #333;
+    color: black;
     font-size: 50px;
 }
 
@@ -211,7 +215,7 @@ h2 {
 }
 
 .tabuleiro button {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
     /* width: 60px;
     height: 60px; */
